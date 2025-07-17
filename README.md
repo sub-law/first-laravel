@@ -13,7 +13,7 @@ Laravelを使った教材開発のステップ記録。
 
 ## 学習ステップ
 ### STEP 01：/test ルートからビュー表示まで
-- `/test` にGETルートを定義
+- `/` にGETルートを定義
 - `TestController` を artisanコマンドで生成
 - `index()` メソッドを作成し `view('index')` を返却
 - ビュー `index.blade.php` を作成して表示確認
@@ -27,3 +27,13 @@ mv resources/views/index.php resources/views/index.blade.php
 git add .
 git commit -m "ルート設定とビュー表示の学習"
 git push
+
+### STEP01：ブラウザ表示までの一連の流れ
+
+| 順番 | ファイル名             | 役割と処理内容                                           |
+|------|------------------------|----------------------------------------------------------|
+| ①    | `routes/web.php`       | `/` にアクセスが来たときのルートを定義                  |
+| ②    | `TestController.php`   | `index()` メソッド内で `view('index')` を呼び出す       |
+| ③    | `index.blade.php`      | ビューをレンダリングして HTML を生成・ブラウザへ表示    |
+
+→ これにより、ルート → コントローラー → ビュー → ブラウザの流れを学習できた ✅

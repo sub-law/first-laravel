@@ -27,3 +27,19 @@ mv resources/views/index.php resources/views/index.blade.php
 git add .
 git commit -m "ルート設定とビュー表示の学習"
 git push
+
+#### 権限エラー時の対応ログ（HelloController.php）
+
+エラー内容：
+「permission denied」により VSCode から保存できなかった。
+
+対応コマンド：
+```bash
+sudo chown shiny:shiny /path/to/HelloController.php
+
+#### STEP02 実装完了ログ（HelloController編）
+
+- `/hello` ルートを設定し、`HelloController@index()` → `hello.blade.php` を表示
+- ブラウザに「ビュー作成・コントローラー呼び出し・ルート設定」の内容が確認できた
+→ Laravel教材STEP02「コントローラーを使った画面表示」の理解を定着 ✅
+

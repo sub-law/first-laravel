@@ -43,3 +43,10 @@ sudo chown shiny:shiny /path/to/HelloController.php
 - ブラウザに「ビュー作成・コントローラー呼び出し・ルート設定」の内容が確認できた
 → Laravel教材STEP02「コントローラーを使った画面表示」の理解を定着 ✅
 
+#### STEP02 実装完了ログ
+
+- `/hello` ルートの追加 → `HelloController@index` に接続
+- ビュー `hello.blade.php` を新規作成し、画面表示を確認 ✅
+- `TestController@index()` で配列をビューに渡し、パラメータ表示が可能に
+- `.gitignore` を調整し、MySQLデータの権限エラーにも対応済み 🔧
+→ Git履歴に全て記録完了 ✅

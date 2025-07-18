@@ -27,13 +27,3 @@ mv resources/views/index.php resources/views/index.blade.php
 git add .
 git commit -m "ルート設定とビュー表示の学習"
 git push
-
-### STEP01：ブラウザ表示までの一連の流れ
-
-| 順番 | ファイル名             | 役割と処理内容                                           |
-|------|------------------------|----------------------------------------------------------|
-| ①    | `routes/web.php`       | `/` にアクセスが来たときのルートを定義                  |
-| ②    | `TestController.php`   | `index()` メソッド内で `view('index')` を呼び出す       |
-| ③    | `index.blade.php`      | ビューをレンダリングして HTML を生成・ブラウザへ表示    |
-
-→ これにより、ルート → コントローラー → ビュー → ブラウザの流れを学習できた ✅

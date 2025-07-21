@@ -46,3 +46,30 @@ Laravelのルーティング機能を使って、画面表示の処理を理解�
 use App\Http\Controllers\TestController;
 
 Route::get('/test/{test?}', [TestController::class, 'index']);
+## STEP04: Requestオブジェクトによるクエリパラメータ受け取り
+
+### 🧠 ポイント
+- `Request` クラスを使用して、URLのクエリ文字列（`?text=〇〇`）から値を取得
+- パスパラメータ（`/test/〇〇`）と違い、URL構造はシンプルで任意パラメータ向き
+- `$request->text` により、Viewに動的データを渡して表示制御が可能
+
+### 🔗 ルーティング設定
+```php
+Route::get('/test', [TestController::class, 'index']);
+## STEP06: 複数のパスパラメータをルートで受け取る
+
+### 🎯 学習目的
+Laravelのルーティングにおいて、URLパスに含まれる複数の動的パラメータを取得し、処理する方法を習得する。
+
+### 🔗 ルート定義（`routes/web.php`）
+```php
+Route::get('/test/{room}/{id}', function ($room, $id) {
+    return 'roomが' . $room . 'でidは' . $id . 'です';
+});
+## STEP07: 任意パラメータとデフォルト値の利用
+
+### 🔗 ルート定義
+```php
+Route::get('/test2/{greeting?}', function ($greeting = 'Goodmorning') {
+    return $greeting . '=おはようございます';
+});

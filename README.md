@@ -30,3 +30,19 @@ git push
 
 ##ブラウザに画面表示をしよう:route編
 2025/07/21
+## STEP03: ルーティングによる画面表示とパラメータ受け取り（Laravel）
+
+### 🎯 学習目的
+Laravelのルーティング機能を使って、画面表示の処理を理解し、URLパラメータの受け渡しや任意化による柔軟な表示制御を体験する。
+
+### 🛠 実装内容
+- コントローラ `TestController` にて `index($text = "デフォルト")` を定義
+  - パラメータがあればその値を、なければ `"デフォルト"` を表示
+- `$item` 配列に `content` と `param` を格納し、`view('index', $item)` に渡す
+- Viewファイル `index.blade.php` にて `$content`, `$param` を表示
+
+### 🔗 ルーティング設定（`routes/web.php`）
+```php
+use App\Http\Controllers\TestController;
+
+Route::get('/test/{test?}', [TestController::class, 'index']);

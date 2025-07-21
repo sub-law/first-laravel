@@ -27,3 +27,6 @@ mv resources/views/index.php resources/views/index.blade.php
 git add .
 git commit -m "ルート設定とビュー表示の学習"
 git push
+
+##ブラウザに画面表示をしよう:route編
+2025/07/21

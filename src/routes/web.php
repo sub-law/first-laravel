@@ -12,7 +12,6 @@ Route::get('/test2/{greeting?}', function ($greeting = 'Goodmorning') {
 use App\Http\Controllers\TestController;
 
 Route::get('/', [TestController::class, 'index']);
-Route::get('/test', [TestController::class, 'index']);
 
 use App\Http\Controllers\HelloController;
 

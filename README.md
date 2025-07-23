@@ -73,3 +73,21 @@ Route::get('/test/{room}/{id}', function ($room, $id) {
 Route::get('/test2/{greeting?}', function ($greeting = 'Goodmorning') {
     return $greeting . '=おはようございます';
 });
+
+✅ 学習内容: 1-9 ブラウザに画面表示をしよう（View編）
+この章では、Laravelのビュー機能を活用し、ブラウザ上にHTMLを表示する基本的な手順を学びました。
+
+📄 コントローラーの作成とビューの表示
+TestController.php に index メソッドを定義し、ビューに配列データ $item を渡す。
+
+index.blade.php ビューで、Blade構文 {{$content}} を使ってデータを表示。
+
+📁 ビューのファイル配置
+ビューは resources/views/index.blade.php に配置。
+
+BladeテンプレートはHTMLの中にPHP変数を埋め込むことで表示内容を動的に構築できる。
+
+🌐 ルーティングの設定
+routes/web.php にて Route::get('/', [TestController::class, 'index']); と記述することで、トップページ表示とコントローラーを紐づけ。
+
+パラメータ付きルートの例として /test1/{room}/{id} や /test2/{greeting?} を学習。
